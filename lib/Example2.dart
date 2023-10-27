@@ -15,20 +15,20 @@ class _Example1State extends State<Example1> {
   Quote(text: "sdfghjklsdfghjklxcvbnmcvbnmvbn", author: 'voshnu')];
   int counter=0;
 
-  Widget quotetemplate(quote){
-    return Card(
+  // Widget quotetemplate(quote){
+  //   return Card(
 
-      margin: EdgeInsets.all(30),
-      child: Padding(
-        padding: const EdgeInsets.all(30.0),
-        child: Column(children: [
-          Text(quote.text ,style: TextStyle(fontSize: 7,fontWeight: FontWeight.bold),),
-             Text(quote.author,style: TextStyle(fontSize: 7,fontWeight: FontWeight.bold),)
-        ],
-        ),
-      ),
-    );
-  }
+  //     margin: EdgeInsets.all(30),
+  //     child: Padding(
+  //       padding: const EdgeInsets.all(30.0),
+  //       child: Column(children: [
+  //         Text(quote.text ,style: TextStyle(fontSize: 7,fontWeight: FontWeight.bold),),
+  //            Text(quote.author,style: TextStyle(fontSize: 7,fontWeight: FontWeight.bold),)
+  //       ],
+  //       ),
+  //     ),
+  //   );
+  // }
   @override
   Widget build(BuildContext context) {
 
@@ -42,14 +42,22 @@ class _Example1State extends State<Example1> {
       // child:Icon(Icons.add),),
     
 
-body: Column(
-  // mainAxisAlignment: MainAxisAlignment.center,
-  crossAxisAlignment: CrossAxisAlignment.start,
-  children: 
+body: 
 
   // quotes.map((quote) {return Text('${quote.text  }  ->${quote.author}');}).toList()
-  quotes.map((e) =>  quotetemplate(e)).toList()
-),
+  //quotes.map((e) =>  quotetemplate(e)).toList()
+  ListView.builder(itemCount: quotes.length,
+  itemBuilder: (context,index){
+    return Card(
+      child: ListTile(
+        onTap: (){},
+        title: Text(quotes[index].text),
+      ),
+    );
+  
+    
+  },)
+
 
     );
   }
