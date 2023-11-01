@@ -5,7 +5,7 @@ import 'package:transparent_image/transparent_image.dart';
 
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key, required List<dynamic> items});
 
   @override
   Widget build(BuildContext context) {

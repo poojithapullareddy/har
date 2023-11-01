@@ -1,8 +1,10 @@
 import 'dart:js';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:mypractice/fadeimage.dart';
+// import 'package:flutter/widgets.dart';
+// import 'package:mypractice/fadeimage.dart';
+ import 'package:mypractice/list.dart';
+import 'package:mypractice/spacing_between_list.dart';
 // import 'package:mypractice/DarkorLight.dart';
 // import 'package:mypractice/Draggable.dart';
 // import 'package:mypractice/Example1.dart';
@@ -28,6 +30,23 @@ import 'package:mypractice/fadeimage.dart';
 //     ),
 //   );
 // }
-void main() {
-  runApp(const MyApp());
-}
+// void main() {
+//   runApp(const MyApp());
+// }
+
+
+
+// void main() {
+//   runApp(
+//     MyApp(
+//       items: List<ListItem>.generate(
+//         1000,
+//         (i) => i % 6 == 0
+//             ? HeadingItem('Heading $i')
+//             : MessageItem('Sender $i', 'Message body $i'),
+//       ),
+//     ),
+//   );
+// }
+
+void main() => runApp(const SpacedItemsList());
